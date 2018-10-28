@@ -13,6 +13,7 @@ matrix:
         - ubuntu-toolchain-r-test
         packages: 
           - libboost1.55-all-dev
+          - liblz4-dev
           - g++-8
           - gcc-8
     env:
@@ -113,6 +114,8 @@ install:
 - if [[ "${LABEL:0:4}" == "osx-" ]]; then brew cask uninstall --force oclint || true ; fi
 
 # Install the correct gcc version
+- if [[ "$LABEL" == "osx-g++-8" ]]; then brew install lz4 ; fi
+- if [[ "$LABEL" == "osx-g++-7" ]]; then brew install lz4 ; fi
 - if [[ "$LABEL" == "osx-g++-8" ]]; then brew install gcc@8 ; fi
 - if [[ "$LABEL" == "osx-g++-7" ]]; then brew install gcc@7 ; fi
 

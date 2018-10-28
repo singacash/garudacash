@@ -211,7 +211,7 @@ rocksdb::Options RocksDBWrapper::getDBOptions(const DataBaseConfig& config) {
 
   fOptions.compression_per_level.resize(fOptions.num_levels);
   for (int i = 0; i < fOptions.num_levels; ++i) {
-    fOptions.compression_per_level[i] = rocksdb::kNoCompression;
+    fOptions.compression_per_level[i] = rocksdb::kLZ4Compression;
   }
 
   rocksdb::BlockBasedTableOptions tableOptions;
