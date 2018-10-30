@@ -30,6 +30,7 @@ matrix:
         - ubuntu-toolchain-r-test
         packages: 
           - libboost1.55-all-dev
+          - liblz4-dev
           - g++-7
           - gcc-7
     env:
@@ -47,6 +48,7 @@ matrix:
         - llvm-toolchain-trusty-6.0
         packages: 
           - libboost1.55-all-dev
+          - liblz4-dev
           - clang-6.0
           - libstdc++-7-dev
     env:
@@ -64,6 +66,7 @@ matrix:
         - llvm-toolchain-trusty-5.0
         packages: 
           - libboost1.55-all-dev
+          - liblz4-dev
           - clang-5.0
           - libstdc++-6-dev
     env:
